@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 라이브러리 사용: Bootstrap 포함 시키기 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .title_left {
+            padding: 15px 20px;
+            font-size: 25px; 
+            color: rgb(83, 83, 83); 
+            font-weight: 400;
+        }
+        .title_right {
+            padding: 15px 20px;
+            text-align: right;
+        }
+        .title_sub {
+            padding: 30px 40px;
+            background-color: rgb(248, 245, 245);
+        }
+        .breadcrumb {
+            font-size: 13px;  
+            font-weight: bold;  
+        }
+        .nav-item, .dropdown-item {
+            font-size: 14px; 
+            color: rgb(83, 83, 83);    
+        }
+        .nav-link > img {
+            padding-right: 10px;
+        }
+        .content_blank {
+            background-color: rgb(248, 245, 245);    
+        }
+        .form_area, .form-select, .form-control {
+            font-size: 13px; 
+            color: rgb(83, 83, 83);   
+            font-weight: bold;
+        }
+        table {
+            border-top: 1px solid; 
+            font-size: 13px; 
+            color: rgb(83, 83, 83);
+        }
+        tr {
+            height: 50px;
+            text-align: center;
+            vertical-align: center;
+            
+        }
+        .form_area > .row {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <form>
+            <div class="row" style="border-bottom: 1px solid lightgray;">
+                <div class="col title_left">
+                    Admin
+                </div>
+                <div class="col title_right">
+                    <a href="#"><img src="./image/light_icon.png"></a>&nbsp;&nbsp;
+                    <a href="#"><img src="./image/grid_icon.png"></a>&nbsp;&nbsp;
+                    <a href="#"><img src="./image/profile_icon.png"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="border-right: 1px solid lightgray;">
+                    <nav class="navbar flex-column">
+                        <div class="navbar-nav w-100">
+                            <div class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <img src="./image/menu_icon_1.png">Home
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_2.png">공지사항
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_3.png">회원관리
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_4.png">서비스관리
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_5.png">커뮤니케이션
+                                </a>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <img src="./image/menu_icon_6.png">시스템관리
+                                </a>
+                                <ul class="dropdown-menu bg-transparent border-0">
+                                    <li><a class="dropdown-item" href="#">코드관리</a></li>
+                                    <li><a class="dropdown-item" href="#">코드그룹관리</a></li>    
+                                </ul>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_7.png">개인정보관리
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_8.png">test
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-10">
+                    <div class="row" style="border-bottom: 1px solid lightgray;">
+                        <div class="col title_sub">
+                            <div class="row">
+                                <div class="col">
+                                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+                                            <li class="breadcrumb-item"><a href="#">Page 2</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Default</li>
+                                        </ol>
+                                    </nav>
+                                </div>    
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-size: 32px; font-weight: bold;">
+                                    Code
+                                </div>    
+                            </div>
+                            <div class="row">
+                                <div class="col form_area">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <select class="form-select" id="yeargroup" required>
+                                                <option selected disabled value="">N</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2">
+                                            <select class="form-select" id="monthgroup" required>
+                                                <option selected disabled value="">Y</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>    
+                                        <div class="col-2">
+                                            <select class="form-select" id="daygroup" required>
+                                                <option selected disabled value="">날짜</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>   
+                                        <div class="col-2">
+                                            <input class="form-control" placeholder="2024-12-25">
+                                        </div>
+                                        <div class="col-2">
+                                            <input class="form-control" placeholder="2024-1-24">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <select class="form-select" id="searchgroup" required>
+                                                <option selected disabled value="">검색구분</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2">
+                                            <input class="form-control" placeholder="검색어">
+                                        </div>   
+                                        <div class="col-2">
+                                            <a href="#"><img src="./image/search_icon.png"></a>
+                                            <a href="#"><img src="./image/refresh_icon.png"></a>
+                                        </div>   
+                                        <div class="col-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 30px 40px;">
+                        <div class="col-10">Total: 160</div>
+                        <div class="col-2" style="text-align: right; padding-bottom: 10px;">
+                            <select class="form-select" id="pagegroup" required>
+                                <option selected disabled value="">5</option>
+                                <option>...</option>
+                            </select>
+                        </div> 
+                        <table class="table">
+                            <tr>
+                                <th scope="col"><input type="checkbox" class="" id=""></th>
+                                <th scope="col">#</th>
+                                <th scope="col">사용</th>
+                                <th scope="col">코드그룹 코드</th>
+                                <th scope="col">코드그룹 이름</th>
+                                <th scope="col">코드</th>
+                                <th scope="col">대체 코드</th>
+                                <th scope="col">코드 이름</th>
+                                <th scope="col">코드 이름(영문)</th>
+                                <th scope="col">순서</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">수정일</th>
+                            </tr>
+                            <tr>
+                                <td scope="row"><input type="checkbox" class="" id=""></th>
+                                <td scope="row">160</th>
+                                <td>Y</td>
+                                <td>42</td>
+                                <td>작품.기타사이트유형</td>
+                                <td>381</td>
+                                <td></td>
+                                <td>공식홈페이지</td>
+                                <td></td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><input type="checkbox" class="" id=""></th>
+                                <td scope="row">159</th>
+                                <td>Y</td>
+                                <td>42</td>
+                                <td>작품.기타사이트유형</td>
+                                <td>382</td>
+                                <td></td>
+                                <td>기타사이트</td>
+                                <td></td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><input type="checkbox" class="" id=""></th>
+                                <td scope="row">158</th>
+                                <td>Y</td>
+                                <td>41</td>
+                                <td>작품.연재사이트</td>
+                                <td>372</td>
+                                <td></td>
+                                <td>네이버웹툰</td>
+                                <td></td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><input type="checkbox" class="" id=""></th>
+                                <td scope="row">157</th>
+                                <td>Y</td>
+                                <td>41</td>
+                                <td>작품.연재사이트</td>
+                                <td>381</td>
+                                <td></td>
+                                <td>카카오웹툰</td>
+                                <td></td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><input type="checkbox" class="" id=""></th>
+                                <td scope="row">156</th>
+                                <td>Y</td>
+                                <td>41</td>
+                                <td>작품.연재사이트</td>
+                                <td>374</td>
+                                <td></td>
+                                <td>버프툰</td>
+                                <td></td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table> 
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>  
+                    </div>
+                    <div class="row" style="padding: 0 40px 30px 40px;">
+                        <div class="col">
+                            <a href="#"><img src="./image/cancel_icon.png"></a>
+                            <a href="#"><img src="./image/delete_icon.png"></a>
+                        </div>
+                        <div class="col" style="text-align: right;">
+                            <a href="#"><img src="./image/u_icon.png"></a>
+                            <a href="#"><img src="./image/green_icon.png"></a> 
+                            <a href="#"><img src="./image/plus_icon.png"></a>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10 content_blank" style="border-top: 1px solid lightgray;"></div>    
+            </div>
+            <div class="row" style="height: 100px;">
+                <div class="col-2" style="border-top: 1px solid lightgray; border-right: 1px solid lightgray; padding: 20px 20px;">
+                    <a href="#"><img src="./image/collspan_icon.png"></a>
+                </div>
+                <div class="col-10 content_blank" style="padding: 20px 20px;">
+                    Thank you for creating with Phoenix | 2023 ⓒ <span style="color: rgb(37, 72, 229);">Themewagon</span> 
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- 외부 라이브러리 사용: Bootstrap 포함 시키기 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
